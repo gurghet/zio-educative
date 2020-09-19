@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/usercode" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/usercode/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="scala-sdk-2.13.3" level="application" />
+    <orderEntry type="library" name="dev.zio:zio_2.13:1.0.1" level="application" />
+    <orderEntry type="library" name="dev.zio:zio-streams_2.13:1.0.1" level="application" />
+    <orderEntry type="library" name="zio-prelude_2.13-0.0.0+338-8f7d3eba-SNAPSHOT" level="application" />
+    <orderEntry type="library" name="dev.zio:zio-test_2.13:1.0.1" level="application" />
+  </component>
+</module>
