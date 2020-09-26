@@ -12,7 +12,7 @@
     <orderEntry type="library" name="scala-sdk-2.13.3" level="application" />
     <orderEntry type="library" name="dev.zio:zio_2.13:1.0.1" level="application" />
     <orderEntry type="library" name="dev.zio:zio-streams_2.13:1.0.1" level="application" />
-    <orderEntry type="library" name="zio-prelude_2.13-0.0.0+338-8f7d3eba-SNAPSHOT" level="application" />
+    <orderEntry type="library" name="zio-prelude_2.13-0.0.0+344-54376239-SNAPSHOT" level="application" />
     <orderEntry type="library" name="dev.zio:zio-test_2.13:1.0.1" level="application" />
   </component>
 </module>
