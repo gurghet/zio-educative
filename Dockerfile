@@ -16,7 +16,8 @@ RUN \
 
 # Install ammonite repl for... science
 RUN \
-  sudo sh -c '(echo "#!/usr/bin/env sh" && curl -L https://github.com/lihaoyi/Ammonite/releases/download/2.2.0/2.13-2.2.0) > /usr/local/bin/amm && chmod +x /usr/local/bin/amm' && amm
+  curl -L -o /usr/local/bin/amm https://git.io/JUVOR && \
+  chmod +x /usr/local/bin/amm
 
 # Install dependencies
 COPY lib/ /lib
