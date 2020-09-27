@@ -1,17 +1,18 @@
 import zio.console.{Console, getStrLn, putStrLn}
 import zio.random.{Random, nextIntBetween}
-import zio.{ExitCode, IO, RIO, Task, URIO}
+import zio.{ExitCode, RIO, Task, URIO}
 
 object BuildingCommandLineApplication extends zio.App {
-  type GameLayer = Console with Random
-
-  val newGame: RIO[GameLayer, Unit] = for {
+  val newGame: RIO[Console with Random, Unit] = for {
     number <- nextIntBetween(1, 10)
     _      <- putStrLn("Can you guess the number?")
     _      <- guessLoop(number)
   } yield ()
 
-  def congratulate(number: Int): URIO[Console, Unit] = putStrLn(s"Congratulations, it was $number!")
+  val program: RIO[Console with Random, Unit] = for {
+    _ <- putStrLn("Welcome to Guess The Number!")
+    _ <- newGame
+  } yield ()
 
   val prompt: RIO[Console, Int] = getStrLn.flatMap(parseInt)
 
@@ -19,12 +20,12 @@ object BuildingCommandLineApplication extends zio.App {
     Task(input.toInt)
       .catchAll(_ => putStrLn(s"""Cannot parse "$input"""") *> prompt)
 
-  def guessLoop(number: Int): RIO[GameLayer, Unit] =
+  def guessLoop(number: Int): RIO[Console with Random, Unit] =
     for {
       guess <- prompt
       _ <-
         if (guess == number)
-          congratulate(number) *> newGame
+          putStrLn("Correct!") *> newGame
         else
           giveHint(guess, number) *> guessLoop(number)
     } yield ()
@@ -34,11 +35,6 @@ object BuildingCommandLineApplication extends zio.App {
       putStrLn("Too high, try again...")
     else
       putStrLn("Too low, try again...")
-
-  val program: RIO[GameLayer, Unit] = for {
-    _ <- putStrLn("Welcome to Guess The Number!")
-    _ <- newGame
-  } yield ()
 
   override def run(args: List[String]): URIO[zio.ZEnv, ExitCode] = program.exitCode
 }
