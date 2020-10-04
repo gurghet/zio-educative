@@ -26,12 +26,12 @@ object FridgeApiNoAliases extends zio.App {
     Server.builder(new InetSocketAddress("0.0.0.0", 5000))
       .handleSome {
         case req if req.uri.getPath == "/temperature" =>
-          ZIO.accessM[Has[Fridge.Service]](fridge =>
-            ZIO.succeed(Response.plain(s"${fridge.get.temperature.formatted("%.1f")}ºC\n"))
+          ZIO.access[Has[Fridge.Service]](fridge =>
+            Response.plain(s"${fridge.get.temperature.formatted("%.1f")}ºC\n")
           )
         case req if req.uri.getPath == "/door-state" =>
-          ZIO.accessM[Has[Fridge.Service]](fridge =>
-            ZIO.succeed(Response.plain(fridge.get.doorState))
+          ZIO.access[Has[Fridge.Service]](fridge =>
+            Response.plain(fridge.get.doorState)
           )
       }.serve.useForever.orDie.provideSome[ZEnv](zenv => zenv ++ Has(Fridge.Service.simulator))
 }
