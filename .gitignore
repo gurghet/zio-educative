@@ -1,1 +1,4 @@
 out/
+.metals/
+.vscode/
+.DS_Store
