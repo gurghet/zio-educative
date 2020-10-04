@@ -3,7 +3,6 @@ import java.net.InetSocketAddress
 import uzhttp.Response
 import uzhttp.server.Server
 import zio._
-
 import scala.util.Random
 
 object FridgeApiNoAliases extends zio.App {
@@ -27,7 +26,7 @@ object FridgeApiNoAliases extends zio.App {
       .handleSome {
         case req if req.uri.getPath == "/temperature" =>
           ZIO.access[Has[Fridge.Service]](fridge =>
-            Response.plain(s"${fridge.get.temperature.formatted("%.1f")}ºC\n")
+            Response.plain(fridge.get.temperature.formatted("%.1f") + "ºC\n")
           )
         case req if req.uri.getPath == "/door-state" =>
           ZIO.access[Has[Fridge.Service]](fridge =>
