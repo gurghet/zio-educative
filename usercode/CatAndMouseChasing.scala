@@ -33,14 +33,14 @@ object CatAndMouseChasing extends zio.App {
       _  <- sleep(100.milliseconds)
     } yield ()).forever
 
-  val compositeProgram: ZIO[zio.ZEnv, MouseEscapedException, Unit] =
+  val compositeProgram: URIO[zio.ZEnv, ExitCode] =
     for {
       lead <- makeMouseLead
-      _    <- catProgram(lead).raceFirst(mouseProgram(lead))
-    } yield ()
+      exitCode <- catProgram(lead)
+        .raceFirst(mouseProgram(lead))
+        .catchAll(exc => putStrLn(s"Cat was ${-exc.catLead} cm ahead when it lost the mouse."))
+        .as(ExitCode.success)
+    } yield exitCode
 
-  override def run(args: List[String]): URIO[ZEnv, ExitCode] =
-    compositeProgram
-      .catchAll(exc => putStrLn(s"Cat was ${-exc.catLead} cm ahead when it lost the mouse."))
-      .as(ExitCode.success)
+  override def run(args: List[String]): URIO[ZEnv, ExitCode] = compositeProgram
 }
