@@ -15,7 +15,7 @@
     <orderEntry type="library" name="dev.zio:zio-streams_2.13:1.0.1" level="application" />
     <orderEntry type="library" name="dev.zio:zio-test_2.13:1.0.1" level="application" />
     <orderEntry type="library" name="org.polynote:uzhttp_2.13:0.2.5" level="project" />
-    <orderEntry type="library" name="zio-prelude_2.12-0.0.0+368-fb49ca6d-SNAPSHOT" level="project" />
     <orderEntry type="library" name="scala-sdk-2.13.3" level="application" />
+    <orderEntry type="library" name="dev.zio:zio-prelude_2.13:1.0.0-RC1" level="project" />
   </component>
 </module>
