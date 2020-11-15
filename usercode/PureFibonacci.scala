@@ -1,10 +1,10 @@
 import zio.prelude.{ SubtypeSmart, isGreaterThanEqualTo }
 object PureFibonacci extends App {
   object NonNegative extends SubtypeSmart[Int](isGreaterThanEqualTo(0)) {
-    val one: NonNegative = NonNegative.wrap(1)
-    val two: NonNegative = NonNegative.wrap(2)
+    val one: NonNegative = NonNegative(1)
+    val two: NonNegative = NonNegative(2)
     implicit class NonNegativeOps(private val nn1: NonNegative) extends AnyVal {
-      def plus(nn2: NonNegative): NonNegative = NonNegative.wrap(nn1 + nn2)
+      def plus(nn2: NonNegative): NonNegative = NonNegative(nn1 + nn2)
     }
   }
   type NonNegative = NonNegative.Type
