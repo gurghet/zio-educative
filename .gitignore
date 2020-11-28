@@ -2,3 +2,5 @@ out/
 .metals/
 .vscode/
 .DS_Store
+.idea
+target/
