@@ -2,6 +2,6 @@ out/
 .metals/
 .vscode/
 .DS_Store
-.idea
+#.idea
 target/
-*.iml
+#*.iml
