@@ -1,0 +1,32 @@
+<component name="libraryTable">
+  <library name="dev.zio:zio-logging_2.13:0.5.3" type="repository">
+    <properties maven-id="dev.zio:zio-logging_2.13:0.5.3" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/zio-logging_2.13-0.5.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-library-2.13.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/zio_2.13-1.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/zio-stacktracer_2.13-1.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/izumi-reflect_2.13-1.0.0-M8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/izumi-reflect-thirdparty-boopickle-shaded_2.13-1.0.0-M8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-collection-compat_2.13-2.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/zio-logging_2.13-0.5.3-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-library-2.13.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/zio_2.13-1.0.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/zio-stacktracer_2.13-1.0.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/izumi-reflect_2.13-1.0.0-M8-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/izumi-reflect-thirdparty-boopickle-shaded_2.13-1.0.0-M8-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-collection-compat_2.13-2.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/zio-logging_2.13-0.5.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-library-2.13.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/zio_2.13-1.0.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/zio-stacktracer_2.13-1.0.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/izumi-reflect_2.13-1.0.0-M8-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/izumi-reflect-thirdparty-boopickle-shaded_2.13-1.0.0-M8-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-collection-compat_2.13-2.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

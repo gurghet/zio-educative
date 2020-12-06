@@ -19,5 +19,6 @@
     <orderEntry type="library" name="dev.zio:zio-test_2.13:1.0.3" level="project" />
     <orderEntry type="library" name="dev.zio:zio-macros_2.13:1.0.3" level="project" />
     <orderEntry type="library" name="scala-sdk-2.13.4" level="application" />
+    <orderEntry type="library" name="dev.zio:zio-logging_2.13:0.5.3" level="project" />
   </component>
 </module>
