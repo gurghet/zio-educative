@@ -1,6 +1,6 @@
 <component name="libraryTable">
   <library name="org.polynote:uzhttp_2.13:0.2.5" type="repository">
-    <properties maven-id="org.polynote:uzhttp_2.13:0.2.6" />
+    <properties maven-id="org.polynote:uzhttp_2.13:LATEST" />
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/uzhttp_2.13-0.2.6.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/zio_2.13-1.0.2.jar!/" />

@@ -1,6 +1,6 @@
 <component name="libraryTable">
   <library name="dev.zio:zio-prelude_2.13:1.0.0-RC1" type="repository">
-    <properties maven-id="dev.zio:zio-prelude_2.13:1.0.0-RC1" />
+    <properties maven-id="dev.zio:zio-prelude_2.13:LATEST" />
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/zio-prelude_2.13-1.0.0-RC1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/scala-library-2.13.3.jar!/" />
